@@ -1,0 +1,36 @@
+{
+  "name": "LED Blink Example",
+  "template": "python",
+  "board": "pi4",
+  "version": "0.1.0",
+  "devices": [
+    {
+      "type": "led",
+      "name": "LED1",
+      "connection": {
+        "pin": 18
+      },
+      "parameters": {
+        "color": "red",
+        "brightness": 100
+      }
+    }
+  ],
+  "connections": [
+    {
+      "from_pin": "GPIO18",
+      "to_pin": "LED1:anode",
+      "wire_color": "red"
+    },
+    {
+      "from_pin": "GND",
+      "to_pin": "LED1:cathode",
+      "wire_color": "black"
+    }
+  ],
+  "environment": {
+    "temperature": 25.0,
+    "humidity": 50.0,
+    "light_level": 100.0
+  }
+}

@@ -1,0 +1,91 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "rpi-simulator"
+version = "1.0.0"
+description = "Advanced Raspberry Pi simulator for embedded systems development, IoT prototyping, and STEM education"
+authors = ["Sherin Joseph Roy <connect@sherinjosephroy.link>"]
+maintainers = ["Sherin Joseph Roy <connect@sherinjosephroy.link>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/Sherin-SEF-AI/RPi-Simulator"
+repository = "https://github.com/Sherin-SEF-AI/RPi-Simulator"
+documentation = "https://rpi-simulator.readthedocs.io"
+keywords = [
+    "raspberry-pi", "simulator", "embedded-systems", "iot", "gpio", 
+    "sensors", "education", "prototyping", "electronics", "automation",
+    "robotics", "stem", "python", "hardware-simulation"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "Topic :: Education",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development :: Embedded Systems",
+    "Topic :: System :: Hardware :: Hardware Drivers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Environment :: X11 Applications :: Qt",
+    "Environment :: Web Environment"
+]
+packages = [
+    {include = "pistudio", from = "packages"},
+    {include = "sim_core", from = "packages"},
+    {include = "board_pi", from = "packages"},
+    {include = "peripherals", from = "packages"},
+    {include = "devices", from = "packages"},
+    {include = "runner", from = "packages"},
+    {include = "logic_tools", from = "packages"},
+    {include = "breadboard", from = "packages"},
+    {include = "env_sim", from = "packages"},
+    {include = "plugin_host", from = "packages"},
+    {include = "testkit", from = "packages"},
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+PyQt6 = "^6.6.0"
+fastapi = "^0.104.0"
+uvicorn = "^0.24.0"
+pydantic = "^2.5.0"
+websockets = "^12.0"
+numpy = "^1.25.0"
+matplotlib = "^3.8.0"
+plotly = "^5.17.0"
+# sqlite3 is built into Python 3.11+
+pytest = "^7.4.0"
+pytest-asyncio = "^0.21.0"
+click = "^8.1.0"
+pyyaml = "^6.0"
+psutil = "^5.9.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.0.0"
+isort = "^5.12.0"
+mypy = "^1.7.0"
+pytest-cov = "^4.1.0"
+pre-commit = "^3.5.0"
+
+[tool.poetry.scripts]
+pistudio = "pistudio.cli:main"
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true

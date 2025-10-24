@@ -1,0 +1,321 @@
+{
+  "name": "IoT Cloud Dashboard",
+  "template": "iot_cloud",
+  "board": "pi4",
+  "version": "1.0.0",
+  "description": "Advanced IoT dashboard with multi-cloud integration, edge computing, and real-time analytics",
+  "devices": [
+    {
+      "type": "bme280",
+      "name": "Environmental_Sensor",
+      "connection": {
+        "i2c": 118
+      },
+      "parameters": {
+        "temperature": 25.0,
+        "pressure": 1013.25,
+        "humidity": 50.0,
+        "altitude": 0.0,
+        "noise_level": 0.1
+      }
+    },
+    {
+      "type": "mpu6050",
+      "name": "Motion_Sensor",
+      "connection": {
+        "i2c": 104
+      },
+      "parameters": {
+        "accel_x": 0.0,
+        "accel_y": 0.0,
+        "accel_z": 1.0,
+        "gyro_x": 0.0,
+        "gyro_y": 0.0,
+        "gyro_z": 0.0,
+        "temperature": 25.0
+      }
+    },
+    {
+      "type": "ads1115",
+      "name": "ADC_Module",
+      "connection": {
+        "i2c": 72
+      },
+      "parameters": {
+        "gain": 1,
+        "data_rate": 128,
+        "channels": 4
+      }
+    },
+    {
+      "type": "led",
+      "name": "Status_LED",
+      "connection": {
+        "pin": 18
+      },
+      "parameters": {
+        "color": "green",
+        "brightness": 255
+      }
+    },
+    {
+      "type": "led",
+      "name": "Alert_LED",
+      "connection": {
+        "pin": 19
+      },
+      "parameters": {
+        "color": "red",
+        "brightness": 255
+      }
+    },
+    {
+      "type": "buzzer",
+      "name": "Alert_Buzzer",
+      "connection": {
+        "pin": 20
+      },
+      "parameters": {
+        "frequency": 2000,
+        "volume": 80
+      }
+    },
+    {
+      "type": "relay",
+      "name": "Control_Relay",
+      "connection": {
+        "pin": 21
+      },
+      "parameters": {
+        "coil_voltage": 5.0,
+        "contact_rating": 10
+      }
+    }
+  ],
+  "connections": [
+    {
+      "from_pin": "GPIO2",
+      "to_pin": "Environmental_Sensor:SDA",
+      "wire_color": "blue"
+    },
+    {
+      "from_pin": "GPIO3",
+      "to_pin": "Environmental_Sensor:SCL",
+      "wire_color": "yellow"
+    },
+    {
+      "from_pin": "GPIO2",
+      "to_pin": "Motion_Sensor:SDA",
+      "wire_color": "blue"
+    },
+    {
+      "from_pin": "GPIO3",
+      "to_pin": "Motion_Sensor:SCL",
+      "wire_color": "yellow"
+    },
+    {
+      "from_pin": "GPIO2",
+      "to_pin": "ADC_Module:SDA",
+      "wire_color": "blue"
+    },
+    {
+      "from_pin": "GPIO3",
+      "to_pin": "ADC_Module:SCL",
+      "wire_color": "yellow"
+    },
+    {
+      "from_pin": "GPIO18",
+      "to_pin": "Status_LED:anode",
+      "wire_color": "green"
+    },
+    {
+      "from_pin": "GPIO19",
+      "to_pin": "Alert_LED:anode",
+      "wire_color": "red"
+    },
+    {
+      "from_pin": "GPIO20",
+      "to_pin": "Alert_Buzzer:positive",
+      "wire_color": "purple"
+    },
+    {
+      "from_pin": "GPIO21",
+      "to_pin": "Control_Relay:coil",
+      "wire_color": "orange"
+    },
+    {
+      "from_pin": "3V3",
+      "to_pin": "Environmental_Sensor:VCC",
+      "wire_color": "red"
+    },
+    {
+      "from_pin": "3V3",
+      "to_pin": "Motion_Sensor:VCC",
+      "wire_color": "red"
+    },
+    {
+      "from_pin": "5V",
+      "to_pin": "ADC_Module:VCC",
+      "wire_color": "red"
+    },
+    {
+      "from_pin": "5V",
+      "to_pin": "Control_Relay:power",
+      "wire_color": "red"
+    },
+    {
+      "from_pin": "GND",
+      "to_pin": "Environmental_Sensor:GND",
+      "wire_color": "black"
+    },
+    {
+      "from_pin": "GND",
+      "to_pin": "Motion_Sensor:GND",
+      "wire_color": "black"
+    },
+    {
+      "from_pin": "GND",
+      "to_pin": "ADC_Module:GND",
+      "wire_color": "black"
+    },
+    {
+      "from_pin": "GND",
+      "to_pin": "Status_LED:cathode",
+      "wire_color": "black"
+    },
+    {
+      "from_pin": "GND",
+      "to_pin": "Alert_LED:cathode",
+      "wire_color": "black"
+    },
+    {
+      "from_pin": "GND",
+      "to_pin": "Alert_Buzzer:negative",
+      "wire_color": "black"
+    },
+    {
+      "from_pin": "GND",
+      "to_pin": "Control_Relay:ground",
+      "wire_color": "black"
+    }
+  ],
+  "environment": {
+    "temperature": 25.0,
+    "humidity": 50.0,
+    "pressure": 1013.25,
+    "light_level": 100.0,
+    "motion_enabled": true,
+    "vibration_level": 0.1
+  },
+  "cloud_config": {
+    "platforms": {
+      "azure": {
+        "enabled": true,
+        "connection_string": "HostName=demo-hub.azure-devices.net;DeviceId=pistudio-demo;SharedAccessKey=demo-key",
+        "telemetry_interval": 30,
+        "fast_interval": 5
+      },
+      "aws": {
+        "enabled": true,
+        "endpoint": "demo-endpoint.iot.us-west-2.amazonaws.com",
+        "thing_name": "pistudio-iot-demo",
+        "cert_path": "./certs/device.pem"
+      },
+      "google": {
+        "enabled": true,
+        "project_id": "pistudio-demo-project",
+        "region": "us-central1",
+        "registry_id": "iot-registry"
+      }
+    },
+    "device_id": "pistudio-iot-demo-001",
+    "telemetry_interval": 30,
+    "fast_telemetry_interval": 5,
+    "offline_buffer_size": 1000
+  },
+  "analytics": {
+    "edge_processing": true,
+    "anomaly_detection": true,
+    "alert_thresholds": {
+      "temperature": {
+        "min": 0,
+        "max": 40
+      },
+      "humidity": {
+        "min": 20,
+        "max": 80
+      },
+      "pressure": {
+        "min": 950,
+        "max": 1050
+      },
+      "vibration": {
+        "max": 2.0
+      }
+    },
+    "trend_analysis": true,
+    "data_retention_hours": 24
+  },
+  "testing": {
+    "test_scenarios": [
+      {
+        "name": "Normal Operation",
+        "description": "Test under normal conditions with cloud connectivity",
+        "environment": {
+          "temperature": 22.0,
+          "humidity": 45.0,
+          "vibration": 0.1
+        },
+        "cloud_connected": true,
+        "expected_alerts": 0
+      },
+      {
+        "name": "High Temperature Alert",
+        "description": "Test temperature alert system",
+        "environment": {
+          "temperature": 45.0,
+          "humidity": 30.0
+        },
+        "expected_alerts": 1,
+        "expected_cloud_events": ["alert"]
+      },
+      {
+        "name": "Offline Operation",
+        "description": "Test offline data buffering",
+        "cloud_connected": false,
+        "duration_minutes": 5,
+        "expected_buffered_messages": 10
+      },
+      {
+        "name": "Cloud Command Processing",
+        "description": "Test remote control via cloud commands",
+        "commands": [
+          {
+            "command": "control_relay",
+            "data": {
+              "state": true
+            }
+          },
+          {
+            "command": "update_config",
+            "data": {
+              "telemetry_interval": 10
+            }
+          }
+        ],
+        "expected_relay_state": true
+      },
+      {
+        "name": "Multi-Sensor Anomaly",
+        "description": "Test multiple simultaneous alerts",
+        "environment": {
+          "temperature": 50.0,
+          "humidity": 95.0,
+          "vibration": 3.0
+        },
+        "expected_alerts": 3,
+        "expected_severity": "high"
+      }
+    ]
+  }
+}

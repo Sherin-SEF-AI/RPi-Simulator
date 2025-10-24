@@ -1,0 +1,48 @@
+{
+  "name": "BME280 I2C Logger",
+  "template": "python",
+  "board": "pi4",
+  "version": "0.1.0",
+  "devices": [
+    {
+      "type": "bme280",
+      "name": "BME280_Sensor",
+      "connection": {
+        "i2c": 118
+      },
+      "parameters": {
+        "temperature": 25.0,
+        "pressure": 1013.25,
+        "humidity": 50.0,
+        "altitude": 0.0
+      }
+    }
+  ],
+  "connections": [
+    {
+      "from_pin": "GPIO2",
+      "to_pin": "BME280_Sensor:SDA",
+      "wire_color": "blue"
+    },
+    {
+      "from_pin": "GPIO3",
+      "to_pin": "BME280_Sensor:SCL",
+      "wire_color": "yellow"
+    },
+    {
+      "from_pin": "3V3",
+      "to_pin": "BME280_Sensor:VCC",
+      "wire_color": "red"
+    },
+    {
+      "from_pin": "GND",
+      "to_pin": "BME280_Sensor:GND",
+      "wire_color": "black"
+    }
+  ],
+  "environment": {
+    "temperature": 25.0,
+    "humidity": 50.0,
+    "light_level": 100.0
+  }
+}

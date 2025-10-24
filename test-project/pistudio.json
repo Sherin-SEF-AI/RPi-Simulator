@@ -1,0 +1,22 @@
+{
+  "name": "test-project",
+  "template": "python",
+  "board": "pi4",
+  "version": "0.1.0",
+  "devices": [
+    {
+      "type": "led",
+      "name": "LED1",
+      "connection": {
+        "pin": 18
+      },
+      "parameters": {}
+    }
+  ],
+  "connections": [],
+  "environment": {
+    "temperature": 25.0,
+    "humidity": 50.0,
+    "light_level": 100.0
+  }
+}
