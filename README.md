@@ -1,4 +1,4 @@
-# 🔧 RPi Simulator - Advanced Raspberry Pi Development Environment
+ # 🔧 RPi Simulator - Advanced Raspberry Pi Development Environment
 
 <div itemscope itemtype="https://schema.org/SoftwareApplication">
 <meta itemprop="name" content="RPi Simulator">
@@ -328,7 +328,7 @@ Special thanks to the open-source community and contributors who have made this 
 
 <div align="center">
 
-**Developed with ❤️ by [Sherin Joseph Roy](https://sherinjosephroy.link) | Co-founder @ [DeepMost AI](https://deepmost.ai)**
+**Developed with ❤️ by [Sherin Joseph Roy](https://sherinjosephroy.link) | Co-founder @ [DeepMost AI](https://deepmostai.com)**
 
 *Bridging AI Research and Real-World Applications*
 
