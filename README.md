@@ -1,11 +1,27 @@
 # 🔧 RPi Simulator - Advanced Raspberry Pi Development Environment
 
+<div itemscope itemtype="https://schema.org/SoftwareApplication">
+<meta itemprop="name" content="RPi Simulator">
+<meta itemprop="description" content="The most comprehensive Raspberry Pi simulator for embedded systems development, IoT prototyping, and educational purposes">
+<meta itemprop="applicationCategory" content="DeveloperApplication">
+<meta itemprop="operatingSystem" content="Windows, macOS, Linux">
+<meta itemprop="programmingLanguage" content="Python">
+<meta itemprop="author" itemscope itemtype="https://schema.org/Person">
+<meta itemprop="name" content="Sherin Joseph Roy">
+<meta itemprop="url" content="https://sherinjosephroy.link">
+<meta itemprop="codeRepository" content="https://github.com/Sherin-SEF-AI/RPi-Simulator">
+<meta itemprop="license" content="https://opensource.org/licenses/MIT">
+
 [![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://python.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PyQt6](https://img.shields.io/badge/GUI-PyQt6-green.svg)](https://www.riverbankcomputing.com/software/pyqt/)
 [![FastAPI](https://img.shields.io/badge/API-FastAPI-009688.svg)](https://fastapi.tiangolo.com/)
+[![GitHub Stars](https://img.shields.io/github/stars/Sherin-SEF-AI/RPi-Simulator?style=social)](https://github.com/Sherin-SEF-AI/RPi-Simulator)
+[![Author](https://img.shields.io/badge/Author-Sherin%20Joseph%20Roy-blue?style=flat&logo=github)](https://sherinjosephroy.link)
 
 **The most comprehensive Raspberry Pi simulator for embedded systems development, IoT prototyping, and educational purposes.** Build, test, and debug your Raspberry Pi projects without physical hardware using our advanced physics-based simulation engine.
+
+</div>
 
 ## 🚀 Why RPi Simulator?
 
@@ -250,16 +266,44 @@ RPi-Simulator/
 - **Issues**: [Report bugs and request features](https://github.com/Sherin-SEF-AI/RPi-Simulator/issues)
 - **Discussions**: [Community Q&A and showcase](https://github.com/Sherin-SEF-AI/RPi-Simulator/discussions)
 
+## 👨‍💻 About the Author
+
+<div itemscope itemtype="https://schema.org/Person">
+
+**[Sherin Joseph Roy](https://sherinjosephroy.link)** is the <span itemprop="jobTitle">Co-founder and Head of Products</span> at <span itemprop="worksFor" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">DeepMost AI</span></span>, where he leads the development of enterprise AI systems that connect data, automation, and intelligence to solve real-world challenges.
+
+<meta itemprop="name" content="Sherin Joseph Roy">
+<meta itemprop="url" content="https://sherinjosephroy.link">
+<meta itemprop="sameAs" content="https://github.com/Sherin-SEF-AI">
+<meta itemprop="sameAs" content="https://x.com/SherinSEF">
+<meta itemprop="sameAs" content="https://www.linkedin.com/in/sherin-roy-deepmost">
+<meta itemprop="sameAs" content="https://mastodon.social/@sherinjoesphroy">
+<meta itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+<meta itemprop="addressLocality" content="Bangalore">
+<meta itemprop="addressCountry" content="India">
+
+### Professional Background
+Passionate about **entrepreneurship**, **startups**, and **artificial intelligence**, Sherin focuses on creating scalable, human-centered AI solutions that redefine how organizations think, decide, and grow. His expertise lies in bridging research and application, transforming cutting-edge AI research into practical enterprise solutions.
+
+### Connect with Sherin
+- 🌐 **Website**: [sherinjosephroy.link](https://sherinjosephroy.link)
+- 🐦 **X (Twitter)**: [@SherinSEF](https://x.com/SherinSEF)
+- 💼 **LinkedIn**: [sherin-roy-deepmost](https://www.linkedin.com/in/sherin-roy-deepmost)
+- 🐘 **Mastodon**: [@sherinjoesphroy](https://mastodon.social/@sherinjoesphroy)
+- 💻 **GitHub**: [@Sherin-SEF-AI](https://github.com/Sherin-SEF-AI)
+- 📧 **Contact**: [Contact Form](https://sherinjosephroy.link/contact)
+
+### Location & Timezone
+📍 **Based in**: Bangalore, India (Asia/Kolkata timezone)
+
+</div>
+
 ## 📄 License & Attribution
 
 **MIT License** - see [LICENSE](LICENSE) file for details.
 
-**Created by**: [Sherin Joseph Roy](mailto:connect@sherinjosephroy.link)  
-**Position**: Co-founder, Head of Products @ DeepMost AI  
-**GitHub**: [@Sherin-SEF-AI](https://github.com/Sherin-SEF-AI)
-
 ### Citation
-If you use RPi Simulator in your research or educational materials, please cite:
+If you use RPi Simulator in your research, educational materials, or commercial projects, please cite:
 
 ```bibtex
 @software{rpi_simulator_2024,
@@ -267,12 +311,29 @@ If you use RPi Simulator in your research or educational materials, please cite:
   author={Roy, Sherin Joseph},
   year={2024},
   url={https://github.com/Sherin-SEF-AI/RPi-Simulator},
-  organization={DeepMost AI}
+  organization={DeepMost AI},
+  address={Bangalore, India},
+  note={Open-source Raspberry Pi simulation platform for embedded systems development}
 }
 ```
+
+### Acknowledgments
+Special thanks to the open-source community and contributors who have made this project possible. RPi Simulator builds upon the excellent work of the Raspberry Pi Foundation and the broader embedded systems community.
 
 ---
 
 ⭐ **Star this repository** if you find RPi Simulator useful for your projects!
 
-**Keywords**: raspberry-pi, simulator, embedded-systems, iot, python, electronics, education, prototyping, gpio, sensors, automation, robotics, stem-education
+---
+
+<div align="center">
+
+**Developed with ❤️ by [Sherin Joseph Roy](https://sherinjosephroy.link) | Co-founder @ [DeepMost AI](https://deepmost.ai)**
+
+*Bridging AI Research and Real-World Applications*
+
+</div>
+
+---
+
+**SEO Keywords**: raspberry-pi-simulator, embedded-systems-development, iot-prototyping, python-raspberry-pi, virtual-electronics, stem-education-tools, gpio-simulation, sensor-simulation, raspberry-pi-development, electronics-education, embedded-programming, iot-development-platform, raspberry-pi-testing, hardware-simulation, educational-electronics, sherin-joseph-roy, deepmost-ai, bangalore-developer, ai-entrepreneur, embedded-systems-engineer

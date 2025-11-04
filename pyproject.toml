@@ -47,6 +47,7 @@ packages = [
     {include = "env_sim", from = "packages"},
     {include = "plugin_host", from = "packages"},
     {include = "testkit", from = "packages"},
+    {include = "feature_planning", from = "packages"},
 ]
 
 [tool.poetry.dependencies]

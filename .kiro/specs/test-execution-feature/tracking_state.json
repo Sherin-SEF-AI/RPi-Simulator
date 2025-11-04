@@ -1,0 +1,93 @@
+{
+  "task_statuses": {
+    "2.1": [
+      {
+        "status": "in_progress",
+        "timestamp": "2025-11-02T15:21:55.426248",
+        "notes": "Started implementation"
+      },
+      {
+        "status": "completed",
+        "timestamp": "2025-11-02T15:21:55.426501",
+        "notes": "Implementation finished"
+      },
+      {
+        "status": "in_progress",
+        "timestamp": "2025-11-02T15:21:55.461557",
+        "notes": ""
+      },
+      {
+        "status": "completed",
+        "timestamp": "2025-11-02T15:21:55.462109",
+        "notes": ""
+      },
+      {
+        "status": "completed",
+        "timestamp": "2025-11-02T15:21:55.471259",
+        "notes": "Approved by user review"
+      },
+      {
+        "status": "in_progress",
+        "timestamp": "2025-11-02T15:33:19.650212",
+        "notes": "Started implementation"
+      },
+      {
+        "status": "completed",
+        "timestamp": "2025-11-02T15:33:19.650637",
+        "notes": "Implementation finished"
+      },
+      {
+        "status": "in_progress",
+        "timestamp": "2025-11-02T15:33:19.696921",
+        "notes": ""
+      },
+      {
+        "status": "completed",
+        "timestamp": "2025-11-02T15:33:19.697316",
+        "notes": ""
+      },
+      {
+        "status": "in_progress",
+        "timestamp": "2025-11-02T15:52:00.670053",
+        "notes": "Started implementation"
+      },
+      {
+        "status": "completed",
+        "timestamp": "2025-11-02T15:52:00.670516",
+        "notes": "Implementation finished"
+      },
+      {
+        "status": "in_progress",
+        "timestamp": "2025-11-02T15:52:00.730938",
+        "notes": ""
+      },
+      {
+        "status": "completed",
+        "timestamp": "2025-11-02T15:52:00.731318",
+        "notes": ""
+      },
+      {
+        "status": "completed",
+        "timestamp": "2025-11-02T15:52:00.737172",
+        "notes": "Approved by user review"
+      }
+    ],
+    "2.2": [
+      {
+        "status": "in_progress",
+        "timestamp": "2025-11-02T15:21:55.477476",
+        "notes": "Needs revision: Please add tests"
+      },
+      {
+        "status": "in_progress",
+        "timestamp": "2025-11-02T15:33:19.716184",
+        "notes": "Needs revision: Please add tests"
+      },
+      {
+        "status": "in_progress",
+        "timestamp": "2025-11-02T15:52:00.741314",
+        "notes": "Needs revision: Please add tests"
+      }
+    ]
+  }
+}

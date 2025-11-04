@@ -2,7 +2,7 @@
 GPIO Controller - Digital I/O with edge detection and timing
 """
 
-from typing import Dict, List, Optional, Callable
+from typing import Dict, List, Optional, Callable, Any
 from enum import Enum
 from sim_core import EventBus, Event, EventType, Signal, SignalState, Edge
 from board_pi import GpioPin, PinMode
@@ -213,8 +213,9 @@ class GpioController:
         
         # Create glitch pulse
         signal.set_value(glitch_value, timestamp)
-        signal.set_value(original_value, timestamp + duration_us / 1_000_000) 
-   def _init_bcm_registers(self) -> Dict[str, int]:
+        signal.set_value(original_value, timestamp + duration_us / 1_000_000)
+        
+    def _init_bcm_registers(self) -> Dict[str, int]:
         """Initialize BCM2835/2711 register simulation"""
         return {
             # GPIO Function Select registers

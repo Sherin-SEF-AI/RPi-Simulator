@@ -1,0 +1,24 @@
+{
+  "enabled": true,
+  "name": "Python Development Workflow",
+  "description": "Comprehensive automation for Python file changes including running tests, formatting with black/isort, type checking with mypy, validating pistudio.json configs, updating __init__.py files, syncing version info, generating docs, running simulations, checking GPIO conflicts, prompting for changelog entries, and managing dependencies",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "packages/**/*.py",
+      "examples/**/*.py",
+      "examples/**/pistudio.json",
+      "test-project/**/pistudio.json",
+      "packages/devices/*.py",
+      "pyproject.toml",
+      "README.md",
+      "CHANGELOG.md",
+      "**/__init__.py"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "A file has been modified in the RPi Simulator project. Please analyze the change and perform the following actions based on the file type:\n\n**For Python files in packages/ directory:**\n1. Run relevant tests and show results\n2. If tests fail, highlight specific issues and suggest fixes\n3. Run black and isort formatting automatically\n4. Check for mypy type errors and report issues needing manual attention\n\n**For any Python file:**\n1. Run black and isort formatting\n2. Check for mypy type errors\n3. Scan for new import dependencies that might need to be added to pyproject.toml\n\n**For pistudio.json files in examples/ or project directories:**\n1. Validate configuration against schema\n2. Check that all referenced devices exist in device library\n3. Verify pin connections are valid for specified board model\n4. Check GPIO pins aren't conflicting\n5. Verify I2C addresses are unique\n6. Ensure all connections follow proper electrical rules\n\n**For device classes in packages/devices/:**\n1. Update __init__.py to include new device in __all__ exports\n2. Add appropriate import statements\n3. Generate/update documentation comments with parameter descriptions, connection examples, and usage patterns\n\n**For pyproject.toml changes:**\n1. If version/dependencies/metadata changed, update corresponding info in README.md\n2. Keep version badges and dependency lists synchronized\n3. If version number changed, prompt user to add CHANGELOG.md entry\n\n**For example projects (main.py or pistudio.json):**\n1. Run simulation in headless mode to verify it works correctly\n2. Check for runtime errors\n\nPlease provide specific, actionable feedback and automatically fix simple formatting issues while reporting complex issues that need manual attention."
+  }
+}
